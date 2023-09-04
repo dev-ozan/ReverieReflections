@@ -1,0 +1,45 @@
+@media (max-width: 991.98px) {
+    .jumbotron .jt-left {
+        padding-top: 50px !important;
+        padding-bottom: 50px !important;
+    }
+
+    .jumbotron .jt-left h1 {
+        font-size: 5em !important;
+    }
+
+    .jumbotron .jt-left p {
+        width: 100% !important;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 24px;
+    }
+
+    .articles article {
+        padding: 0 !important;
+    }
+
+    .articles .article-right {
+        position: relative !important;
+        margin-bottom: 30px !important;
+        top: 0 !important;
+    }
+
+    .articles .article-desc h3 {
+        font-size: 16px !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        display: -webkit-box !important;
+        -webkit-box-orient: vertical !important;
+        -webkit-line-clamp: 2 !important;
+        letter-spacing: 0;
+    }
+
+    .articles .article-desc p {
+        display: none !important;
+    }
+
+    .articles .article-footer .xbadge {
+        display: none !important;
+    }
+}

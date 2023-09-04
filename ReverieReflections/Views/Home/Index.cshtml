@@ -1,0 +1,221 @@
+﻿@using ReverieReflections.Data;
+@model YazarMakaleViewModel
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="~/mediumassets/css/style.css">
+
+    <!-- Favicons CSS -->
+    <link rel="apple-touch-icon" sizes="57x57" href="~/mediumassets/img/favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="~/mediumassets/img/favicons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="~/mediumassets/img/favicons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="~/mediumassets/img/favicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="~/mediumassets/img/favicons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="~/mediumassets/img/favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="~/mediumassets/img/favicons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="~/mediumassets/img/favicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="~/mediumassets/img/favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="~/mediumassets/img/favicons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="~/mediumassets/img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="~/mediumassets/img/favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="~/mediumassets/img/favicons/favicon-16x16.png">
+    <link rel="manifest" href="~/mediumassets/img/favicons/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>Medium – Where good ideas find you.</title>
+</head>
+
+<body>
+
+    @{
+     
+    }
+
+    <!-- Header End -->
+    <!-- Main Start -->
+    <main id="main">
+        <!-- Jumbotron Start -->
+        <section class="container-fluid jumbotron">
+
+            <div class="jt-right d-none d-lg-block">
+                <img src="~/mediumassets/img/jtimg.png" alt="">
+            </div>
+
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-md-12 p-0">
+                    <div class="container jt-left">
+                        <h1>Stay curious.</h1>
+                        <p>Discover stories, thinking, and expertise from writers on any topic.</p>
+                        <a href="#" class="btn btn-dark rounded-pill btn-lg">Start reading</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Jumbotron End -->
+        <!-- Trends Start -->
+        <section class="container-fluid trends">
+            <div class="container">
+                <div class="row d-flex justify-content-center align-items-center h-100">
+                    <div class="col-md-12 p-0">
+                        <div class="container trends-header">
+                            <h4>
+                                <svg width="28" height="29" viewBox="0 0 28 29" fill="none" class="ie y">
+                                    <path fill="#fff" d="M0 .8h28v28H0z"></path>
+                                    <g opacity="0.8" clip-path="url(#trending_svg__clip0)">
+                                        <path fill="#fff" d="M4 4.8h20v20H4z"></path>
+                                        <circle cx="14" cy="14.79" r="9.5" stroke="#000"></circle>
+                                        <path d="M5.46 18.36l4.47-4.48M9.97 13.87l3.67 3.66M13.67 17.53l5.1-5.09M16.62 11.6h3M19.62 11.6v3"
+                                              stroke="#000" stroke-linecap="round"></path>
+                                    </g>
+                                    <defs>
+                                        <clipPath id="trending_svg__clip0">
+                                            <path fill="#fff" transform="translate(4 4.8)" d="M0 0h20v20H0z"></path>
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                TRENDING ON MEDIUM
+                            </h4>
+                        </div>
+                    </div>
+
+                   
+                </div>
+            </div>
+        </section>
+        <!-- Trends End -->
+        <!-- Articles Start -->
+        <section class="container-fluid articles">
+            <div class="container">
+                <div class="row d-flex justify-content-center">
+                    <div class="col-md-12 col-lg-8 order-2 order-lg-1">
+                        <!-- Articles Post Start -->
+                        <article class="container">
+
+
+
+                            @foreach (var item in Model.Makaleler)
+                            {
+                                <div class="row">
+                                    <div class="col-7 col-md-8">
+                                        <div class="article-pic">
+                                            <a href="#">
+                                                <img src="https://via.placeholder.com/20" class="rounded-circle" alt="">
+                                                <span>@item.Yazar.Ad</span>
+                                            </a>
+                                        </div>
+                                        <div class="article-desc">
+                                            <a href="#">
+                                                <h3>
+                                                    @item.MakaleAdi
+                                                </h3>
+                                            </a>
+                                            <a href="#"></a>
+                                            <p>
+                                               @item.Content
+                                            </p>
+                                        </div>
+                                        <div class="article-footer">
+                                            <span>Apr 22 · 3 min read ·</span>
+                                            <a href="#" class="xbadge rounded-pill">Birding</a>
+                                            <a href="#" class="float-end">
+                                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" class="ld">
+                                                    <path d="M18 2.5a.5.5 0 0 1 1 0V5h2.5a.5.5 0 0 1 0 1H19v2.5a.5.5 0 1 1-1 0V6h-2.5a.5.5 0 0 1 0-1H18V2.5zM7 7a1 1 0 0 1 1-1h3.5a.5.5 0 0 0 0-1H8a2 2 0 0 0-2 2v14a.5.5 0 0 0 .8.4l5.7-4.4 5.7 4.4a.5.5 0 0 0 .8-.4v-8.5a.5.5 0 0 0-1 0v7.48l-5.2-4a.5.5 0 0 0-.6 0l-5.2 4V7z"
+                                                          fill="#292929"></path>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-5 col-md-4 article-img">
+                                        <a href="#">
+                                            <img src="https://miro.medium.com/fit/c/200/134/1*GAyvD3bIRca3EVotLMSUqQ.jpeg" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            }
+                        </article>
+
+                      
+                    </div>
+
+                    <div class="col-md-12 col-lg-4 article-right order-1 order-lg-2">
+                        <div class="discover-header">
+                            <h3>Discover more of what matters to you</h3>
+                        </div>
+                        <div class="discover-list">
+                            <a href="#" class="discover-item">Self</a>
+                            <a href="#" class="discover-item">Relationships</a>
+                            <a href="#" class="discover-item">Data Science</a>
+                            <a href="#" class="discover-item">Programming</a>
+                            <a href="#" class="discover-item">Productivity</a>
+                            <a href="#" class="discover-item">Javascript</a>
+                            <a href="#" class="discover-item">Machine Learning</a>
+                            <a href="#" class="discover-item">Politics</a>
+                            <a href="#" class="discover-item">Health</a>
+                        </div>
+
+                        <div class="footer-nav">
+                            <nav class="nav">
+                                <ul>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Help</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">
+                                            Status
+
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Writers</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Blog</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Careers</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Privacy</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Terms</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">About</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Knowable</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Articles End -->
+    </main>
+    <!-- Main End -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
+
+    <script src="~/mediumassets/js/app.js"></script>
+
+</body>
+
+</html>
